@@ -64,3 +64,23 @@ class Student {
         this.labPoints = labPoints;
     }
 }
+class Course {
+    List<Student> students = new ArrayList<Student>();
+
+    public void addStudent(Student student) {
+        students.add(student);
+    }
+
+    public void removeStudent(Student student) {
+        students.remove(student);
+    }
+
+    public void showInfos(Student student) {
+        System.out.println("Index: " + student.getIndex());
+        System.out.println("First Name: " + student.getFirstName());
+        System.out.println("Last Name: " + student.getLastName());
+        System.out.println("Lab Points: " + student.getLabPoints());
+        System.out.println("Average: " + student.getAverage());
+        System.out.println("Has Signature: " + student.hasSignature());
+    }
+}
